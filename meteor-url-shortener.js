@@ -21,7 +21,7 @@ if (Meteor.isClient) {
     }
   });
 
-  Template.newUrl.helpers({
+  Template.url.helpers({
     fullShortLink: function () {
       return Meteor.absoluteUrl() + 'm/' + this.shortLink;
     }
