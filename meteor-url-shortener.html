@@ -1,0 +1,38 @@
+<head>
+  <title>Meteor Url Shortener</title>
+</head>
+
+<body>
+	<div class="container">
+		<header class="navbar">
+			<h1> Meteor Url Shortener </h1>
+		</header>
+		{{#if currentUser}} Logged in as: {{/if}}
+		{{> loginButtons}}
+		{{#if currentUser}}
+
+		<form class="new-url">
+        <input type="text" name="longLink" placeholder="Long url" required />
+        <input type="text" name="shortLink" placeholder="Short url" required />
+        <button class="btn waves-effect waves-light" type="submit">
+        	Submit
+        	<i class="material-icons"></i>
+        </button>
+    </form>
+
+		<h2> Urls </h2>
+		<div class="collection">
+			{{#each urls}}
+				{{> newUrl}}
+			{{/each}}
+		</div>
+		{{/if}}
+	</div>
+</body>
+
+<template name="newUrl">
+	<div class="collection-item">
+  <a href={{longLink}}> {{fullShortLink}} --> {{longLink}}</a>
+  	<button class="btn-small delete" style="float:right">&times;</button>
+  </div>
+</template>
