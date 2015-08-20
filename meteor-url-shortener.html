@@ -14,6 +14,9 @@
     {{> loginButtons}}
 
     {{#if currentUser}}
+    <p>
+      Enter in the original URL, and then a keyword or multiple keywords to define the short URL. The short url must not contain any spaces or special characters (can contain dashes, underscores, periods). The shortened URL will be http://go.meteor.com/m/{your_short_url_keyword}. Only users that created a URL will have the ability to delete it. However, one can over write a URL by just submitting another entry with the same short URL.
+    </p>
       <form class="new-url">
         <input type="text" name="longLink" placeholder="Long url" required />
         <input type="text" name="shortLink" placeholder="Short url" required />

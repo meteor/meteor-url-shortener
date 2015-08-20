@@ -7,7 +7,7 @@
 meteor-platform
 accounts-ui
 accounts-google
-ecmascript
 es5-shim
 meteorhacks:picker
 materialize:materialize
+ecmascript
