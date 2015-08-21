@@ -52,6 +52,7 @@ if (Meteor.isClient) {
 
 
 if (Meteor.isServer) {
+  Urls._ensureIndex({shortLink: 1});
   Meteor.startup(function () {
     // code to run on server at startup
   });
